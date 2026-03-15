@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculer Moyenne</title>
+</head>
+<style>
+    body{
+        background-color: black;
+
+    }
+    .btn1{
+        height: 50px;
+    }
+    div{
+        border: 3px solid rgb(8, 190, 114);
+        width: 300px;
+        height: 380px;
+        border-radius: 40px;
+        margin-top: 30px;
+        padding-bottom: 0;
+        box-shadow: 3px 3px 3px rgb(8, 190, 114);
+    }
+    input{
+        margin-top: 30px;
+        height: 50px;
+        width: 190px;
+        
+
+        border: 3px solid blueviolet;
+        border-radius: 100px;
+        background-color: black;
+        transition: 0.25s;
+        color: white;
+        font-weight: 900;
+        text-align: center;
+        box-shadow: 3px 3px 3px blueviolet;
+        font-size: 25px;
+        
+        
+
+        
+    }
+    input:focus{
+        width: 225px;
+        
+        outline: none;
+        border-radius: 123px;
+        
+        
+    }
+    input::placeholder{
+        font-size: 15px;
+    }
+    button{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        height: 43px;
+        width: 222px;
+        color: rgb(8, 190, 114);
+        background-color: rgb(0, 0, 0);
+        border: 3.3px solid rgb(8, 190, 114);
+        font-weight: 900;
+        border-radius: 15px;
+        transition: 0.5s;
+        transform: scale(1.1);
+        border-radius: 100px;
+    }
+    button:hover{
+        color: rgb(255, 255, 255);
+        background-color: rgb(8, 190, 114);
+        transform: scale(1.1);
+    }
+    button:active{
+        color: rgb(255, 255, 255);
+        background-color: rgb(8, 190, 114);
+        transform: scale(0.9);
+    }
+    h2{
+        color: white;
+        font-weight: 900;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    label{
+        text-align: center;
+        font-weight: 900;
+        font-size: 23px;
+        font-family: "calibri";
+        color: white;
+    }
+    .div{
+        height: 320px;
+        margin-bottom: 30px;
+    }
+    legend{
+        font-weight: 700;
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    #check:active{
+      
+        transform: scale(1.075);
+    }
+    #divv{
+        height: 40px;
+        width: 200px;
+        
+        border-radius: 7px;
+        border: 3px solid blueviolet;
+        box-shadow: 3px 3px 3px blueviolet;
+        color: white;
+        text-align: center;
+        font-weight: 900;
+        margin-top: 0;
+        padding-top: 17px;
+        padding-bottom: 17px;
+        font-size: 30px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  box-shadow: none;
+  margin-top: 7px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: black;
+  position: relative;
+}
+
+/* Optional: Add a white checkmark icon */
+input[type="checkbox"]:checked::after {
+  content: '\2713';
+  position: absolute;
+  color: white;
+  font-size: 25px;
+  left: 3px;
+  top: -1px;
+  bottom: 2px;
+}
+.div{
+    height: 390px;
+}
+  
+
+
+
+
+
+
+
+    
+    
+</style>
+<body>
+    <center>
+        <div>
+            <h2>
+                Arabe
+            </h2>
+        <input type="number" value="" id="oar" placeholder="Orale" max="20" min="0"><br>
+        <input type="number" name="" id="car" placeholder="Controle"><br>
+        <input type="number" name="" id="sar" placeholder="Synthese"><br>
+    </div>
+    <div>
+        <h2>
+            Francais
+        </h2>
+        <input type="number" name="" id="ofr" placeholder="Orale"><br>
+        <input type="number" name="" id="cfr" placeholder="Controle"><br>
+        <input type="number" name="" id="sfr" placeholder="Synthese"><br>
+    </div>
+    <div>
+        <h2>
+            Anglais
+        </h2>
+        <input type="number" name="" id="oen" placeholder="Orale"><br>
+        <input type="number" name="" id="cen" placeholder="Controle"><br>
+        <input type="number" name="" id="sen" placeholder="Synthese"><br>
+    </div>
+    <div>
+        <h2>
+            Histoire
+        </h2>
+        <input type="number" name="" id="ohis" placeholder="Orale"><br>
+        <input type="number" name="" id="chis" placeholder="Controle"><br>
+        <input type="number" name="" id="shis" placeholder="Synthese"><br>
+    </div>
+    <div>
+        <h2>
+            Geographie
+        </h2>
+        <input type="number" name="" id="ogeo" placeholder="Orale"><br>
+        <input type="number" name="" id="cgeo" placeholder="Controle"><br>
+        <input type="number" name="" id="sgeo" placeholder="Synthese"><br>
+    </div>
+    <div>
+        <h2>Ed.Civique</h2>
+        <input type="number" name="" id="ociv" placeholder="Orale" ><br>
+        <input type="number" name="" id="cciv" placeholder="Controle"><br>
+        <input type="number" name="" id="sciv" placeholder="Synthese"><br>
+    </div>
+    <div>
+        <h2>Pensée islamique</h2>
+        <input type="number" name="" id="oisl" placeholder="Orale"><br>
+        <input type="number" name="" id="cisl" placeholder="Controle"><br>
+        <input type="number" name="" id="sisl" placeholder="Synthese"><br>
+    </div>
+    <div>
+        <h2>Mathématique</h2>
+        <input type="number" placeholder="Controle" name="" id="cm"><br>
+        <input type="number" placeholder="Controle 2" name="" id="cm2"><br>
+        <input type="number" placeholder="Synthese" name="" id="sm"><br>
+    </div>
+    <div>
+        <h2>Science</h2>
+        <input type="number" placeholder="Controle" name="" id="csc"><br>
+        <input type="number" placeholder="TP" name="" id="tpsc"><br>
+        <input type="number" placeholder="Synthese" name="" id="ssc"><br>
+    </div>
+    <div>
+        <h2>Physique</h2>
+        <input type="number" placeholder="Controle" name="" id="cph"><br>
+        <input type="number" placeholder="TP" name="" id="tpph"><br>
+        <input type="number" placeholder="Synthese" name="" id="sph"><br>
+    </div>
+    <div>
+        <h2>Informatique</h2>
+        <input type="number" placeholder="Controle" name="" id="ci"><br>
+        <input type="number" placeholder="TP" name="" id="tpi"><br>
+        <input type="number" placeholder="Synthese" name="" id="si"><br>
+    </div>
+    <div>
+        <h2>Technique</h2>
+        <input type="number" placeholder="Controle" name="" id="ctech"><br>
+        <input type="number" placeholder="TP" name="" id="tptech"><br>
+        <input type="number" placeholder="Synthese" name="" id="stech"><br>
+    </div>
+    <div class="div">
+        <h2>éducation Physique</h2>
+        <input type="number" placeholder="Controle" name="" id="cs"><br>
+        <input type="number" placeholder="Synthese" name="" id="ss"><br><br><br>
+        <label for="">Dispense</label><br>
+        <input type="checkbox" name="" id="dis">
+        
+        
+        
+        
+    </div>
+    
+    <button onclick="showmoy()">
+        Voir votre moyenne
+    </button><br><br><br>
+    <div id="divv">
+        00.00
+    </div>
+    
+    
+    </center>
+</body>
+<script>
+    function showmoy(){
+        
+
+        let oar = parseFloat(document.getElementById("oar").value) || 0;
+        let car = parseFloat(document.getElementById("car").value) || 0;
+        let sar = parseFloat(document.getElementById("sar").value) || 0;
+        let ofr = parseFloat(document.getElementById("ofr").value) || 0;
+        let cfr = parseFloat(document.getElementById("cfr").value) || 0;
+        let sfr = parseFloat(document.getElementById("sfr").value) || 0;
+        let oen = parseFloat(document.getElementById("oen").value) || 0;
+        let cen = parseFloat(document.getElementById("cen").value) || 0;
+        let sen = parseFloat(document.getElementById("sen").value) || 0;
+        let ohis = parseFloat(document.getElementById("ohis").value) || 0;
+        let chis = parseFloat(document.getElementById("chis").value) || 0;
+        let shis = parseFloat(document.getElementById("shis").value) || 0;
+        let ogeo = parseFloat(document.getElementById("ogeo").value) || 0;
+        let cgeo = parseFloat(document.getElementById("cgeo").value) || 0;
+        let sgeo = parseFloat(document.getElementById("sgeo").value) || 0;
+        let ociv = parseFloat(document.getElementById("ociv").value) || 0;
+        let cciv = parseFloat(document.getElementById("cciv").value) || 0;
+        let sciv = parseFloat(document.getElementById("sciv").value) || 0;
+        let oisl = parseFloat(document.getElementById("oisl").value) || 0;
+        let cisl = parseFloat(document.getElementById("cisl").value) || 0;
+        let sisl = parseFloat(document.getElementById("sisl").value) || 0;
+        let cm = parseFloat(document.getElementById("cm").value) || 0;
+        let cm2 = parseFloat(document.getElementById("cm2").value) || 0;
+        let sm = parseFloat(document.getElementById("sm").value) || 0;
+        let cph = parseFloat(document.getElementById("cph").value) || 0;
+        let tpph = parseFloat(document.getElementById("tpph").value) || 0;
+        let sph = parseFloat(document.getElementById("sph").value) || 0;
+        let ci = parseFloat(document.getElementById("ci").value) || 0;
+        let tpi = parseFloat(document.getElementById("tpi").value) || 0;
+        let si = parseFloat(document.getElementById("si").value) || 0;
+        let ctech = parseFloat(document.getElementById("ctech").value) || 0;
+        let tptech = parseFloat(document.getElementById("tptech").value) || 0;
+        let stech = parseFloat(document.getElementById("stech").value)|| 0;
+        let cs = parseFloat(document.getElementById("cs").value) || 0;
+        let ss = parseFloat(document.getElementById("ss").value) || 0;
+        let csc = parseFloat(document.getElementById("csc").value) || 0;
+        let tpsc = parseFloat(document.getElementById("tpsc").value) || 0;
+        let ssc = parseFloat(document.getElementById("ssc").value) || 0;
+         
+        let moysc = (csc + tpsc + ssc*2)/4;
+        let moyar = (oar + car + sar*2)/4;
+        let moyfr = (ofr + cfr + sfr*2)/4;
+        let moyen = (oen + cen + sen*2)/4;
+        let moyhis =(ohis + chis + shis*2)/4;
+        let moygeo = (ogeo + cgeo + sgeo*2)/4;
+        let moyciv = (ociv + cciv + sciv*2)/4;
+        let moyisl = (oisl + cisl + sisl*2)/4;
+        let moym = (cm + cm2 + sm*2)/4;
+        let moyph = (cph + tpph + sph*2)/4;
+        let moyi = (ci + tpi + si*2)/4;
+        let moytech = (ctech + tptech + stech*2)/4;
+        let moys = (cs + ss*2)/3;
+        let dis = document.getElementById("dis").checked;
+        let total;
+        let coef;
+        if(dis){
+            coef = 24;
+            total = (moyar*2 + moyfr*2 + moyen*2 + moym*3 + moyph*4 + moyi*1 + moytech*2 + moyhis + moygeo + moyciv + moyisl + moysc*4)
+        }else{
+            coef = 25;
+            total = (moyar*2 + moyfr*2 + moyen*2 + moym*3 + moyph*4 + moyi*1 + moytech*2 + moyhis + moygeo + moyciv + moyisl + moys + moysc*4)
+        }
+        let moy_gen = total/coef;
+        
+        let div = document.getElementById("divv");
+        div.innerHTML= moy_gen.toFixed(2);
+        
+        
+        
+    }
+    
+    
+    
+</script>
+</html>
+    
+
+   
